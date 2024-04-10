@@ -1,0 +1,8 @@
+.textOverflow {
+	white-space: nowrap; /* Prevent text from wrapping */
+	overflow: hidden; /* Hide any overflowing content */
+	text-overflow: ellipsis; /* Display ellipsis (...) for overflowed text */
+}
+.active-link {
+	background: #000;
+}
