@@ -11,7 +11,7 @@ function App() {
 	const [isSideBarOppen, setIsSideBarOppen] = useState(false);
 
 	return (
-		<div className="flex w-full h-screen overflow-hidden relative">
+		<div className="flex w-full h-screen overflow-hidden relative container mx-auto poppins-regular">
 			{/* Sidebar */}
 
 			<Sidebar isSideBarOppen={isSideBarOppen} setIsSideBarOppen={setIsSideBarOppen} />
