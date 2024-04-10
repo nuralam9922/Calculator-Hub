@@ -7,8 +7,49 @@ import { CiCloudMoon } from 'react-icons/ci';
 import { useState } from 'react';
 import { useRef } from 'react';
 import { useEffect } from 'react';
+import { changeTheme } from '../../theme/theme';
+const themeList = [
+	{
+		name: 'theme 1',
+		theme: 'theme1',
+	},
+	{
+		name: 'theme 2',
+		theme: 'theme2',
+	},
+	{
+		name: 'theme 3',
+		theme: 'theme3',
+	},
+	{
+		name: 'theme 4',
+		theme: 'theme4',
+	},
+	{
+		name: 'theme 5',
+		theme: 'theme5',
+	},
+	{
+		name: 'theme 6',
+		theme: 'theme6',
+	},
+	{
+		name: 'theme 7',
+		theme: 'theme7',
+	},
+	{
+		name: 'theme 8',
+		theme: 'theme8',
+	},
+	{
+		name: 'theme 9',
+		theme: 'theme9',
+	},
+];
+
 function Navbar({ setIsSideBarOppen }) {
 	const [themeMenuOppen, setThemeMenuOppen] = useState(false);
+	const [currentTheme, setCurrentThem] = useState(1);
 	const themeMenuRef = useRef();
 
 	useEffect(() => {
@@ -23,9 +64,15 @@ function Navbar({ setIsSideBarOppen }) {
 			document.removeEventListener('click', handleClickOutside);
 		};
 	}, [themeMenuRef]);
+
 	const handelSetThemeMenu = () => {
 		setThemeMenuOppen((prev) => !prev);
 	};
+
+	const themetab = (themeNumber) => {
+		setCurrentThem(themeNumber);
+	};
+
 	return (
 		<nav className="bg-white  py-4 px-6 sticky top-0 flex items-center justify-between z-[99]">
 			<div className="container mx-auto relative  hidden md:block">
@@ -57,12 +104,22 @@ function Navbar({ setIsSideBarOppen }) {
 					</p>
 					<div
 						style={{ display: themeMenuOppen ? 'block' : 'none' }}
-						className="absolute select-none top-10 bg-white w-52 h-52 left-0 z-[999] divide-y"
+						className="absolute select-none top-10 bg-background w-52  left-0 z-[999] divide-y"
 					>
-						<div className="w-full py-3 px-2 hover:bg-blue-200 hover:text-white">Theme 1</div>
-						<div className="w-full py-3 px-2 hover:bg-blue-200 hover:text-white">Theme 2</div>
-						<div className="w-full py-3 px-2 hover:bg-blue-200 hover:text-white">Theme 3</div>
-						<div className="w-full py-3 px-2 hover:bg-blue-200 hover:text-white">Theme 4</div>
+						{themeList.map((item, i) => (
+							<>
+								<div
+									// onClick={() => setCurrentThem(i + 1)}
+									key={i}
+									onClick={() => changeTheme(`${item.theme}`, setCurrentThem(i + 1))}
+									className={`w-full capitalize py-3 px-2 ${
+										currentTheme === i + 1 && 'bg-blue-200'
+									} hover:bg-blue-200 hover:text-black text-black`}
+								>
+									{item.name}
+								</div>
+							</>
+						))}
 					</div>
 				</div>
 				<h1 className="cursor-pointer text-black hover:bg-slate-100 p-2 items-center justify-center flex text-xl">

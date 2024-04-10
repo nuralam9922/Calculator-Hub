@@ -1,9 +1,77 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 .poppins-regular {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
 	font-style: normal;
+}
+
+@layer base {
+	html[data-theme='theme1'] {
+		--text: #1a1909;
+		--background: #fdfdf9;
+		--primary: #c2c248;
+		--secondary: #c0dd9a;
+		--accent: #99cf6f;
+	}
+
+	html[data-theme='theme2'] {
+		--text: #0c0a11;
+		--background: #f5f3f8;
+		--primary: #7d65ab;
+		--secondary: #d0b1a9;
+		--accent: #beb987;
+	}
+	html[data-theme='theme3'] {
+		--text: #ffffff;
+		--background: #fdfafe;
+		--primary: #af30e7;
+		--secondary: #f1a886;
+		--accent: #eac24b;
+	}
+	html[data-theme='theme4'] {
+		--text: #05171a;
+		--background: #f9fefe;
+		--primary: #37cadb;
+		--secondary: #83a4e8;
+		--accent: #5566e0;
+	}
+	html[data-theme='theme5'] {
+		--text: #0d1508;
+		--background: #fbfdfa;
+		--primary: #86c154;
+		--secondary: #90d7c2;
+		--accent: #70c9cb;
+	}
+	html[data-theme='theme6'] {
+		--text: #03030c;
+		--background: #f6f6fd;
+		--primary: #3f3bcd;
+		--secondary: #e4ab95;
+		--accent: #d1d763;
+	}
+	html[data-theme='theme7'] {
+		--text: #0d0f00;
+		--background: #fdfff2;
+		--primary: #d0f81d;
+		--secondary: #6efade;
+		--accent: #47b2f9;
+	}
+	html[data-theme='theme8'] {
+		--text: #1c0111;
+		--background: #fff6fb;
+		--primary: #f60d8c;
+		--secondary: #fac46f;
+		--accent: #f4f83b;
+	}
+	html[data-theme='theme9'] {
+		--text: #e0d9dd;
+		--background: #252124;
+		--primary: #f60d8c;
+		--secondary: #fac46f;
+		--accent: #f4f83b;
+	}
 }

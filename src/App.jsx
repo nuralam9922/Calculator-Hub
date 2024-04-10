@@ -5,9 +5,10 @@ import './App.css';
 import { useState } from 'react';
 import Sidebar from './components/Sidebar/Sidebar';
 import Navbar from './components/Navbar/Navbar';
+import { changeTheme } from './theme/theme';
 function App() {
 	document.title = 'Calculator Hub';
-
+	changeTheme('theme1');
 	const [isSideBarOppen, setIsSideBarOppen] = useState(false);
 
 	return (
