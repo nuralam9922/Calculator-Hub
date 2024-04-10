@@ -12,6 +12,7 @@
 @layer base {
 	html[data-theme='theme1'] {
 		--text: #1a1909;
+		--textSecondary: #333333;
 		--background: #fdfdf9;
 		--primary: #c2c248;
 		--secondary: #c0dd9a;
@@ -20,13 +21,15 @@
 
 	html[data-theme='theme2'] {
 		--text: #0c0a11;
+		--textSecondary: #333333;
 		--background: #f5f3f8;
 		--primary: #7d65ab;
 		--secondary: #d0b1a9;
 		--accent: #beb987;
 	}
 	html[data-theme='theme3'] {
-		--text: #ffffff;
+		--text: #373434;
+		--textSecondary: #333333;
 		--background: #fdfafe;
 		--primary: #af30e7;
 		--secondary: #f1a886;
@@ -34,6 +37,7 @@
 	}
 	html[data-theme='theme4'] {
 		--text: #05171a;
+		--textSecondary: #333333;
 		--background: #f9fefe;
 		--primary: #37cadb;
 		--secondary: #83a4e8;
@@ -41,6 +45,7 @@
 	}
 	html[data-theme='theme5'] {
 		--text: #0d1508;
+		--textSecondary: #333333;
 		--background: #fbfdfa;
 		--primary: #86c154;
 		--secondary: #90d7c2;
@@ -48,6 +53,7 @@
 	}
 	html[data-theme='theme6'] {
 		--text: #03030c;
+		--textSecondary: #646464;
 		--background: #f6f6fd;
 		--primary: #3f3bcd;
 		--secondary: #e4ab95;
@@ -55,6 +61,7 @@
 	}
 	html[data-theme='theme7'] {
 		--text: #0d0f00;
+		--textSecondary: #333333;
 		--background: #fdfff2;
 		--primary: #d0f81d;
 		--secondary: #6efade;
@@ -62,16 +69,22 @@
 	}
 	html[data-theme='theme8'] {
 		--text: #1c0111;
+		--textSecondary: #333333;
 		--background: #fff6fb;
 		--primary: #f60d8c;
 		--secondary: #fac46f;
 		--accent: #f4f83b;
 	}
 	html[data-theme='theme9'] {
-		--text: #e0d9dd;
+		--text: #f5f5f5;
 		--background: #252124;
 		--primary: #f60d8c;
 		--secondary: #fac46f;
 		--accent: #f4f83b;
+		--textSecondary: #666565;
 	}
+}
+
+* {
+	transition: all 0.4s linear;
 }

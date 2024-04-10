@@ -47,22 +47,22 @@ function Sidebar({ isSideBarOppen, setIsSideBarOppen }) {
 		<aside
 			ref={sidebarRef}
 			style={{ visibility: isSideBarOppen ? 'visible' : 'hidden', width: isSideBarOppen ? '15rem' : '0px' }}
-			className=" h-screen md:block bg-[#edeff8] duration-200 text-white flex-shrink-0 fixed top-0 left-0 md:static z-[99] overflow-hidden text-ellipsis text-nowrap "
+			className=" h-screen md:block bg-background duration-200 text-white flex-shrink-0 fixed top-0 left-0 md:static z-[99] shadow-md	 overflow-hidden text-ellipsis text-nowrap "
 		>
-			<div className="p-4 relative h-full border-2">
+			<div className="p-4 relative h-full ">
 				{/* Sidebar Logo */}
-				<h1 className="text-xl font-bold text-black">Calculator Hub</h1>
+				<h1 className="text-xl font-bold text-text logo">Calculator Hub</h1>
 				{/* Sidebar Navigation */}
-				<nav className="mt-6 text   ">
+				<nav className="mt-6    ">
 					<ul className="flex flex-col gap-2">
 						{sidebarLinks.map((item, index) => (
 							<>
 								<Link onClick={() => handelSideBarTab(index + 1)} key={index} to={`${item.path}`}>
 									<p
 										onClick={() => handelSideBarTab(1)}
-										className={`text-[#9799a2] flex items-center  gap-2 hover:bg-[#d6e0f9] ${
+										className={`text-textSecondary flex items-center  gap-2 hover:bg-accent ${
 											currentTab === index + 1 && 'text-[#578CFE] bg-[#d6e0f9]'
-										} hover:text-[#578CFE]  py-3 px-2 rounded-md`}
+										} py-3 px-2 rounded-md`}
 									>
 										{' '}
 										<span>{item.icon}</span> <p className="capitalize">{item.name}</p>

@@ -74,7 +74,7 @@ function Navbar({ setIsSideBarOppen }) {
 	};
 
 	return (
-		<nav className="bg-white  py-4 px-6 sticky top-0 flex items-center justify-between z-[99]">
+		<nav className="bg-background text-text  py-4 px-6 sticky top-0 flex items-center justify-between z-[99]">
 			<div className="container mx-auto relative  hidden md:block">
 				<IoSearch className="absolute top-1/2 left-5 -translate-y-1/2 -translate-x-1/2 " />
 				<input
@@ -85,26 +85,23 @@ function Navbar({ setIsSideBarOppen }) {
 					id=""
 				/>
 			</div>
-			<h1 className="font-bold md:hidden text-black">Calculator hub</h1>
-			<div className="flex items-center text-black justify-between w-auto ">
-				<div className="hidden md:flex items-center cursor-pointer hover:bg-slate-100 w-52 justify-center rounded-sm">
-					<div className="profileLogo size-8 rounded-full bg-slate-200"></div>
+			<h1 className="font-bold md:hidden text-text">Calculator hub</h1>
+			<div className="flex items-center text-text justify-between w-auto ">
+				<div className="hidden md:flex items-center cursor-pointer  w-52 justify-center rounded-sm">
+					<div className="profileLogo size-8 rounded-full "></div>
 					<div className="ml-3">
-						<p className="font-bold text-xs text-zinc-600">Nuralam Mondal</p>
+						<p className="font-bold text-xs text-text">Nuralam Mondal</p>
 						<p className="text-slate-500">nuralam9922</p>
 					</div>
 					<FaAngleDown className="ml-3 text-blue-400" />
 				</div>
-				<div
-					ref={themeMenuRef}
-					className="cursor-pointer hidden md:flex relative text-black hover:bg-slate-100 p-2 items-center justify-center  text-xl"
-				>
+				<div ref={themeMenuRef} className="cursor-pointer hidden md:flex relative text-text p-2 items-center justify-center  text-xl">
 					<p onClick={handelSetThemeMenu} className="flex items-center justify-center select-none">
-						Themes <CiCloudMoon className="ml-2" />
+						Themes <CiCloudMoon className="ml-2 text-primary" />
 					</p>
 					<div
 						style={{ display: themeMenuOppen ? 'block' : 'none' }}
-						className="absolute select-none top-10 bg-background w-52  left-0 z-[999] divide-y"
+						className="absolute select-none top-10 bg-white w-52  text-text left-0 z-[999] divide-y"
 					>
 						{themeList.map((item, i) => (
 							<>
@@ -112,9 +109,7 @@ function Navbar({ setIsSideBarOppen }) {
 									// onClick={() => setCurrentThem(i + 1)}
 									key={i}
 									onClick={() => changeTheme(`${item.theme}`, setCurrentThem(i + 1))}
-									className={`w-full capitalize py-3 px-2 ${
-										currentTheme === i + 1 && 'bg-blue-200'
-									} hover:bg-blue-200 hover:text-black text-black`}
+									className={`w-full capitalize py-3 px-2 ${currentTheme === i + 1 && 'bg-blue-200'} hover:bg-blue-200 text-black`}
 								>
 									{item.name}
 								</div>
@@ -122,15 +117,15 @@ function Navbar({ setIsSideBarOppen }) {
 						))}
 					</div>
 				</div>
-				<h1 className="cursor-pointer text-black hover:bg-slate-100 p-2 items-center justify-center flex text-xl">
+				<h1 className="cursor-pointer text-text p-2 items-center justify-center flex text-xl">
 					<IoIosNotificationsOutline />{' '}
 				</h1>
-				<h1 className="cursor-pointer text-black hover:bg-slate-100 p-2 items-center justify-center flex text-xl">
+				<h1 className="cursor-pointer text-text p-2 items-center justify-center flex text-xl">
 					<FiMessageCircle />{' '}
 				</h1>
 				<div
 					onClick={() => setIsSideBarOppen((prev) => !prev)}
-					className="cursor-pointer text-black hover:bg-slate-100 size-10 items-center justify-center flex text-xl"
+					className="cursor-pointer text-text size-10 items-center justify-center flex text-xl"
 				>
 					<FaAlignRight className="" />
 				</div>

@@ -5,8 +5,12 @@ export default {
 		extend: {
 			colors: {
 				text: 'var(--text)',
+				textSecondary: 'var(--textSecondary)',
 				background: 'var(--background)',
+				PrimaryBackground: 'var(--primary)',
 				primary: 'var(--primary)',
+				secondary: 'var(--secondary)',
+				accent: 'var(--accent)',
 			},
 		},
 	},
