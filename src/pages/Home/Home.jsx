@@ -5,7 +5,7 @@ function Home() {
 	return (
 		<main className="min-h-screen w-full poppins-regular  bg-background">
 			{/* Header */}
-			<nav className="w-full flex items-center justify-between bg-background text-text px-8 py-5 shadow-md">
+			<nav className="w-full flex items-center justify-between bg-background text-text px-8 py-2 shadow-md">
 				<div className="logo font-bold text-lg text-text">CALCULATOR HUB</div>
 				<a
 					href="https://github.com"
@@ -18,7 +18,7 @@ function Home() {
 			</nav>
 
 			{/* Main Content */}
-			<section className="flex flex-col md:flex-row items-center justify-between bg-background text-text py-10 px-10 relative z-[10]">
+			<section className="flex flex-col md:flex-row items-center justify-between bg-background text-text  px-10 relative z-[10]">
 				<div className="w-full md:w-1/2 mb-8 md:mb-0 md:mr-8">
 					<div className="text-text poppins-semibold flex flex-col items-center md:items-start justify-between gap-3  md:gap-0">
 						<h1 className="font-bold text-2xl sm:text-3xl text-nowrap md:text-4xl leading-tight md:leading-relaxed">

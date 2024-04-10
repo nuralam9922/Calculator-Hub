@@ -7,6 +7,7 @@ import Sidebar from './components/Sidebar/Sidebar';
 import Navbar from './components/Navbar/Navbar';
 import { changeTheme } from './theme/theme';
 import { useEffect } from 'react';
+import { Suspense } from 'react';
 function App() {
 	document.title = 'Calculator Hub';
 
@@ -29,7 +30,9 @@ function App() {
 
 				{/* Main Content */}
 				<div className="container h-screen mx-auto ">
-					<Outlet />
+					<Suspense fallback={<div className="w-full h-screen flex items-center justify-center text-text">Loading...</div>}>
+						<Outlet />
+					</Suspense>
 				</div>
 			</main>
 		</div>

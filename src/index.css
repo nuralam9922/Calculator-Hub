@@ -12,7 +12,7 @@
 @layer base {
 	html[data-theme='theme1'] {
 		--text: #1a1909;
-		--textSecondary: #333333;
+		--textSecondary: #2b2b2b;
 		--background: #fdfdf9;
 		--primary: #c2c248;
 		--secondary: #c0dd9a;
