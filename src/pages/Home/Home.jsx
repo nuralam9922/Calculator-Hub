@@ -18,7 +18,7 @@ function Home() {
 			</nav>
 
 			{/* Main Content */}
-			<section className="flex flex-col md:flex-row items-center justify-between bg-gray-50 py-10 px-10 relative">
+			<section className="flex flex-col md:flex-row items-center justify-between bg-gray-50 py-10 px-10 relative z-[10]">
 				<div className="w-full md:w-1/2 mb-8 md:mb-0 md:mr-8">
 					<div className="text-black poppins-semibold flex flex-col items-center md:items-start justify-between gap-3  md:gap-0">
 						<h1 className="font-bold text-3xl text-nowrap md:text-4xl leading-tight md:leading-relaxed">Welcome to Calculator Hub</h1>
@@ -51,7 +51,7 @@ function Home() {
 					</div>
 				</div>
 				{/* middle arrow */}
-				<div className="arrow hidden lg:block absolute top-[20%] left-1/2 -translate-x-1/2 -translate-y-1/2">
+				<div className="arrow hidden  lg:block absolute top-[20%] left-1/2 -translate-x-1/2 -translate-y-1/2">
 					<svg width="168" height="87" viewBox="0 0 168 87" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<g clip-path="url(#clip0_102_1247)">
 							<path

@@ -27,7 +27,7 @@ function Navbar({ setIsSideBarOppen }) {
 		setThemeMenuOppen((prev) => !prev);
 	};
 	return (
-		<nav className="bg-white  py-4 px-6 sticky top-0 flex items-center justify-between">
+		<nav className="bg-white  py-4 px-6 sticky top-0 flex items-center justify-between z-[99]">
 			<div className="container mx-auto relative  hidden md:block">
 				<IoSearch className="absolute top-1/2 left-5 -translate-y-1/2 -translate-x-1/2 " />
 				<input
@@ -55,7 +55,10 @@ function Navbar({ setIsSideBarOppen }) {
 					<p onClick={handelSetThemeMenu} className="flex items-center justify-center select-none">
 						Themes <CiCloudMoon className="ml-2" />
 					</p>
-					<div style={{ display: themeMenuOppen ? 'block' : 'none' }} className="absolute select-none top-10 bg-white w-52 h-52 left-0 divide-y">
+					<div
+						style={{ display: themeMenuOppen ? 'block' : 'none' }}
+						className="absolute select-none top-10 bg-white w-52 h-52 left-0 z-[999] divide-y"
+					>
 						<div className="w-full py-3 px-2 hover:bg-blue-200 hover:text-white">Theme 1</div>
 						<div className="w-full py-3 px-2 hover:bg-blue-200 hover:text-white">Theme 2</div>
 						<div className="w-full py-3 px-2 hover:bg-blue-200 hover:text-white">Theme 3</div>
