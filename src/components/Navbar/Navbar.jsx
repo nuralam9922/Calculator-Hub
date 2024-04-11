@@ -109,7 +109,7 @@ function Navbar({ setIsSideBarOppen }) {
 							<>
 								<div
 									// onClick={() => setCurrentThem(i + 1)}
-									key={i}
+									key={item}
 									onClick={(e) => changeTheme(`${item.theme}`, setCurrentThem(i + 1, e.target.value))}
 									className={`w-full capitalize py-3 px-2 ${currentTheme === i + 1 && 'bg-blue-200'} hover:bg-blue-200 text-black`}
 								>

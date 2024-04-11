@@ -7,6 +7,7 @@ import { IoHomeOutline, IoSettingsOutline } from 'react-icons/io5';
 import { useEffect } from 'react';
 import { useRef } from 'react';
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const sidebarLinks = [
 	{
@@ -39,9 +40,23 @@ const sidebarLinks = [
 function Sidebar({ isSideBarOppen, setIsSideBarOppen }) {
 	const sidebarRef = useRef();
 	const [currentTab, setCurrentTab] = useState(1);
+	let { pathname } = useLocation();
+
 	const handelSideBarTab = (tabNumber) => {
 		setCurrentTab(tabNumber);
 	};
+
+	useEffect(() => {
+		if (pathname === '/calculator') {
+			setCurrentTab(2);
+		} else if (pathname === '/emi-calculator') {
+			setCurrentTab(3);
+		} else if (pathname === '/loan-calculator') {
+			setCurrentTab(4);
+		}
+	}, []);
+
+	console.log(pathname);
 
 	return (
 		<aside
@@ -57,7 +72,7 @@ function Sidebar({ isSideBarOppen, setIsSideBarOppen }) {
 					<ul className="flex flex-col gap-2">
 						{sidebarLinks.map((item, index) => (
 							<>
-								<Link onClick={() => handelSideBarTab(index + 1)} key={index} to={`${item.path}`}>
+								<Link onClick={() => handelSideBarTab(index + 1)} key={item.path} to={`${item.path}`}>
 									<p
 										onClick={() => handelSideBarTab(1)}
 										className={`text-textSecondary flex items-center  gap-2 hover:bg-accent ${
