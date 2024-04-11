@@ -14,7 +14,8 @@ function App() {
 	const [isSideBarOppen, setIsSideBarOppen] = useState(false);
 
 	useEffect(() => {
-		changeTheme('theme1');
+		const theme = localStorage.getItem('theme')
+		changeTheme(theme || 'theme1');
 	}, []);
 
 	return (

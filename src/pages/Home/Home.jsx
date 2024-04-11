@@ -1,4 +1,3 @@
-import React from 'react';
 import heroImage from '../../assets/hero.png';
 import './home.css';
 function Home() {
@@ -18,7 +17,7 @@ function Home() {
 			</nav>
 
 			{/* Main Content */}
-			<section className="flex flex-col md:flex-row items-center justify-between bg-background text-text  px-10 relative z-[10]">
+			<section className="flex flex-col md:flex-row items-center justify-between bg-background text-text py-10 md:py-0 px-10 relative z-[10]">
 				<div className="w-full md:w-1/2 mb-8 md:mb-0 md:mr-8">
 					<div className="text-text poppins-semibold flex flex-col items-center md:items-start justify-between gap-3  md:gap-0">
 						<h1 className="font-bold text-2xl sm:text-3xl text-nowrap md:text-4xl leading-tight md:leading-relaxed">
@@ -40,13 +39,13 @@ function Home() {
 					<div className="mt-8 flex flex-col md:flex-row">
 						<button
 							type="button"
-							className="bg-PrimaryBackground text-text text-sm md:text-base px-4 py-2 rounded-md  hover:bg-accent hover:shadow-accent hover:shadow-lg transition duration-300 mr-4 mb-4 md:mb-0"
+							className="bg-PrimaryBackground  text-text text-sm md:text-base px-4 py-2 rounded-md   hover:shadow-accent hover:shadow-lg transition duration-300 mr-4 mb-4 md:mb-0"
 						>
 							Explore Calculators
 						</button>
 						<button
 							type="button"
-							className="hover:bg-gray-900 border-2 border-PrimaryBackground text-text text-sm md:text-base px-4 py-2 rounded-md hover:text-backbg-background shadow-primary  transition duration-300 mr-4 mb-4 md:mb-0"
+							className="hover:bg-secondary border-2 border-PrimaryBackground text-text text-sm md:text-base px-4 py-2 rounded-md hover:text-back relative  bg-background shadow-primary  transition duration-300 mr-4 mb-4 md:mb-0"
 						>
 							Explore Calculators
 						</button>
