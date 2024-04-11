@@ -47,7 +47,7 @@ function Sidebar({ isSideBarOppen, setIsSideBarOppen }) {
 		<aside
 			ref={sidebarRef}
 			style={{ visibility: isSideBarOppen ? 'visible' : 'hidden', width: isSideBarOppen ? '15rem' : '0px' }}
-			className=" h-screen md:block bg-background duration-200 text-white flex-shrink-0 fixed top-0 left-0 md:static z-[99] shadow-md	 overflow-hidden text-ellipsis text-nowrap "
+			className=" h-screen md:block bg-background duration-200 text-white flex-shrink-0 fixed top-0 left-0 lg:static z-[999] shadow-md	 overflow-hidden text-ellipsis text-nowrap "
 		>
 			<div className="p-4 relative h-full ">
 				{/* Sidebar Logo */}

@@ -14,7 +14,7 @@ function App() {
 	const [isSideBarOppen, setIsSideBarOppen] = useState(false);
 
 	useEffect(() => {
-		const theme = localStorage.getItem('theme')
+		const theme = localStorage.getItem('theme');
 		changeTheme(theme || 'theme1');
 	}, []);
 
@@ -30,7 +30,7 @@ function App() {
 				<Navbar setIsSideBarOppen={setIsSideBarOppen} />
 
 				{/* Main Content */}
-				<div className="container h-screen mx-auto ">
+				<div className="container h-auto mx-auto ">
 					<Suspense fallback={<div className="w-full h-screen flex items-center justify-center text-text">Loading...</div>}>
 						<Outlet />
 					</Suspense>
