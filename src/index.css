@@ -21,7 +21,7 @@
 
 	html[data-theme='theme2'] {
 		--text: #0c0a11;
-		--textSecondary: #333333;
+		--textSecondary: #000000;
 		--background: #f5f3f8;
 		--primary: #7d65ab;
 		--secondary: #d0b1a9;

@@ -76,7 +76,7 @@ function Navbar({ setIsSideBarOppen }) {
 	};
 
 	return (
-		<nav className="bg-background text-text  py-4 px-6 sticky top-0 flex items-center justify-between z-[99]">
+		<nav className="bg-background text-text  py-4 px-4 md:px-6 sticky top-0 flex items-center justify-between z-[99]">
 			<div className="container mx-auto relative  hidden md:block">
 				<IoSearch className="absolute top-1/2 left-5 -translate-y-1/2 -translate-x-1/2 " />
 				<input
@@ -87,7 +87,7 @@ function Navbar({ setIsSideBarOppen }) {
 					id=""
 				/>
 			</div>
-			<h1 className="font-bold md:hidden text-text">Calculator hub</h1>
+			<h1 className="font-bold md:hidden text-text uppercase">Calculator hub</h1>
 			<div className="flex items-center text-text justify-between w-auto ">
 				<div className="hidden md:flex items-center cursor-pointer  w-52 justify-center rounded-sm">
 					<div className="profileLogo size-8 rounded-full "></div>
