@@ -69,6 +69,7 @@ function Navbar({ setIsSideBarOppen }) {
 		setThemeMenuOppen((prev) => !prev);
 	};
 
+
 	const themetab = (themeNumber, theme) => {
 		console.log('aa');
 		setCurrentThem(themeNumber);

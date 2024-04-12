@@ -1,3 +1,6 @@
 .btn {
 	@apply h-12 flex-grow  w-full lg:w-20  text-white rounded-md hover:bg-zinc-600 active:scale-90 focus:outline-none transition duration-300;
 }
+.btn2{
+	@apply  bg-zinc-700 rounded-md active:scale-95 duration-100 w-full h-12 text-white
+}

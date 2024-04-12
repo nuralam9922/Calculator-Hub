@@ -4,7 +4,7 @@ function Home() {
 	return (
 		<main className="  w-full poppins-regular  bg-background">
 			{/* Header */}
-			<nav className="w-full flex items-center justify-between bg-background text-text px-8 py-2 shadow-md">
+			<nav className="w-full hidden md:flex items-center justify-between bg-background text-text px-8 py-2 shadow-md">
 				<div className="logo font-bold text-lg text-text">CALCULATOR HUB</div>
 				<a
 					href="https://github.com"
