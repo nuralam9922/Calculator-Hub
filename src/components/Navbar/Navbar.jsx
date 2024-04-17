@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { useRef } from 'react';
 import { useEffect } from 'react';
 import { changeTheme } from '../../theme/theme';
+import { Link } from 'react-router-dom';
 const themeList = [
 	{
 		name: 'theme 1',
@@ -53,6 +54,12 @@ function Navbar({ setIsSideBarOppen }) {
 	const themeMenuRef = useRef();
 
 	useEffect(() => {
+		let savedThemeName = localStorage.getItem('theme');
+		const themeIndex = themeList.findIndex((theme) => theme.theme === savedThemeName);
+		setCurrentThem(themeIndex + 1);
+	}, []);
+
+	useEffect(() => {
 		const handleClickOutside = (event) => {
 			if (themeMenuRef.current && !themeMenuRef.current.contains(event.target)) {
 				setThemeMenuOppen(false);
@@ -68,7 +75,6 @@ function Navbar({ setIsSideBarOppen }) {
 	const handelSetThemeMenu = () => {
 		setThemeMenuOppen((prev) => !prev);
 	};
-
 
 	const themetab = (themeNumber, theme) => {
 		console.log('aa');
@@ -88,7 +94,9 @@ function Navbar({ setIsSideBarOppen }) {
 					id=""
 				/>
 			</div>
-			<h1 className="font-bold md:hidden text-text uppercase">Calculator hub</h1>
+			<Link to={'/'}>
+				<h1 className="font-bold md:hidden text-text uppercase">Calculator hub</h1>
+			</Link>
 			<div className="flex items-center text-text justify-between w-auto ">
 				<div className="hidden md:flex items-center cursor-pointer  w-52 justify-center rounded-sm">
 					<div className="profileLogo size-8 rounded-full "></div>

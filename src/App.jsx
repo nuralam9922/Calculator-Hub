@@ -11,15 +11,14 @@ import { Suspense } from 'react';
 function App() {
 	document.title = 'Calculator Hub';
 
-	const [isSideBarOppen, setIsSideBarOppen] = useState(false);
-
+	const [isSideBarOppen, setIsSideBarOppen] = useState(window.innerWidth >= 1024 ? true : false);
 	useEffect(() => {
 		const theme = localStorage.getItem('theme');
 		changeTheme(theme || 'theme1');
 	}, []);
 
 	return (
-		<div className="flex w-full h-screen overflow-hidden relative container mx-auto poppins-regular bg-background">
+		<div className="flex w-full h-screen overflow-hidden relative  mx-auto poppins-regular bg-background">
 			{/* Sidebar */}
 
 			<Sidebar isSideBarOppen={isSideBarOppen} setIsSideBarOppen={setIsSideBarOppen} />
@@ -30,7 +29,7 @@ function App() {
 				<Navbar setIsSideBarOppen={setIsSideBarOppen} />
 
 				{/* Main Content */}
-				<div className="container h-auto mx-auto ">
+				<div className=" h-auto mx-auto ">
 					<Suspense fallback={<div className="w-full h-screen flex items-center justify-center text-text">Loading...</div>}>
 						<Outlet />
 					</Suspense>

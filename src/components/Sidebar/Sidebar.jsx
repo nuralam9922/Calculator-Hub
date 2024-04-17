@@ -47,22 +47,20 @@ function Sidebar({ isSideBarOppen, setIsSideBarOppen }) {
 	};
 
 	useEffect(() => {
-		if (pathname === '/calculator') {
+		if (pathname.split('/')[1] === 'calculator') {
 			setCurrentTab(2);
-		} else if (pathname === '/emi-calculator') {
+		} else if (pathname.split('/')[1] === 'emi-calculator') {
 			setCurrentTab(3);
-		} else if (pathname === '/loan-calculator') {
+		} else if (pathname.split('/')[1] === 'loan-calculator') {
 			setCurrentTab(4);
 		}
 	}, []);
-
-	console.log(pathname);
 
 	return (
 		<aside
 			ref={sidebarRef}
 			style={{ visibility: isSideBarOppen ? 'visible' : 'hidden', width: isSideBarOppen ? '15rem' : '0px' }}
-			className=" h-screen md:block bg-background duration-200 text-white flex-shrink-0 fixed top-0 left-0 lg:static z-[999] shadow-md	 overflow-hidden text-ellipsis text-nowrap "
+			className=" h-screen  md:block bg-background duration-200 text-white flex-shrink-0 fixed top-0 left-0 lg:static z-[999] shadow-xl	 overflow-hidden text-ellipsis text-nowrap "
 		>
 			<div className="p-4 relative h-full ">
 				{/* Sidebar Logo */}
@@ -72,10 +70,17 @@ function Sidebar({ isSideBarOppen, setIsSideBarOppen }) {
 					<ul className="flex flex-col gap-2">
 						{sidebarLinks.map((item, index) => (
 							<>
-								<Link onClick={() => handelSideBarTab(index + 1)} key={item.path} to={`${item.path}`}>
+								<Link
+									onClick={() => {
+										handelSideBarTab(index + 1);
+										setIsSideBarOppen((prev) => (window.innerWidth < 1024 ? !prev : prev));
+									}}
+									key={item.path + 1}
+									to={`${item.path}`}
+								>
 									<p
 										onClick={() => handelSideBarTab(1)}
-										className={`text-textSecondary flex items-center  gap-2 hover:bg-accent ${
+										className={`text-textSecondary duration-75 flex items-center  gap-2 hover:bg-accent ${
 											currentTab === index + 1 && 'text-[#578CFE] bg-[#d6e0f9]'
 										} py-3 px-2 rounded-md`}
 									>

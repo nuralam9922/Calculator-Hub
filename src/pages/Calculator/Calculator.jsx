@@ -107,6 +107,9 @@ function Calculator() {
 
 		const handleKeyDown = (e) => {
 			let key = e.key;
+			if (key === 'Enter') {
+				handelCalculateResult();
+			}
 			if (key === 'Backspace') {
 				handelDelete();
 			}
@@ -121,10 +124,6 @@ function Calculator() {
 			document.removeEventListener('keydown', handleKeyDown);
 		};
 	}, []);
-
-	useEffect(() => {
-		handelCalculateResult();
-	}, [userInput]);
 
 	return (
 		<div className="w-full   px-5  h-fit py-5 ">
@@ -159,7 +158,7 @@ function Calculator() {
 			</div>
 
 			{/* calculation box or btn */}
-			<div className=" w-full   mt-6 flex flex-col lg:flex-row  ">
+			<div className=" w-full   mt-32 lg:mt-6 flex flex-col lg:flex-row  ">
 				{/* top column or advance column and it show only  the mobile view */}
 				<div className="w-full  lg:hidden flex items-center gap-3 overflow-x-auto ">
 					{signs.map((sign, index) => (
@@ -206,7 +205,7 @@ function Calculator() {
 						</div>
 
 						{/*  numbers */}
-						<div className="h-full w-full  mt-5 md:mt-10 grid grid-cols-4 md:grid-cols-5 gap-4 place-content-start text-text">
+						<div className="h-full w-full  mt-5 md:mt-6 grid grid-cols-4 md:grid-cols-5 gap-4 place-content-start text-text">
 							{numberValues.map((number, index) => (
 								<button onClick={() => handelAddInput(number)} key={index} type="button" className="btn2">
 									{number}

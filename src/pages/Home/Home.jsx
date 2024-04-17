@@ -19,7 +19,7 @@ function Home() {
 			{/* Main Content */}
 			<section className="flex flex-col md:flex-row items-center justify-between bg-background text-text py-10 md:py-0 px-10 relative z-[10]">
 				<div className="w-full md:w-1/2 mb-8 md:mb-0 md:mr-8">
-					<div className="text-text poppins-semibold flex flex-col items-center md:items-start justify-between gap-3  md:gap-0">
+					<div className="text-text poppins-semibold flex text-nowrap flex-col items-center md:items-start justify-between gap-3  md:gap-0">
 						<h1 className="font-bold text-2xl sm:text-3xl text-nowrap md:text-4xl leading-tight md:leading-relaxed">
 							Welcome to Calculator Hub
 						</h1>
@@ -28,7 +28,9 @@ function Home() {
 								<span className="bg-PrimaryBackground px-3 py-1 rounded-md text-gray-900">your destination for</span>
 							</h1>
 						</div>
-						<h1 className="font-bold text-2xl sm:text-3xl md:text-4xl leading-tight md:leading-relaxed">all financial calculations.</h1>
+						<h1 className="font-bold text-2xl text-nowrap sm:text-3xl md:text-4xl leading-tight md:leading-relaxed">
+							all financial calculations.
+						</h1>
 					</div>
 					<p className="text-sm md:text-base poppins-regular  text-gray-400 mt-6 max-w-md md:max-w-lg text-justify">
 						Calculator Hub is your go-to platform for a wide range of financial calculations, from loan and mortgage calculations to EMI and

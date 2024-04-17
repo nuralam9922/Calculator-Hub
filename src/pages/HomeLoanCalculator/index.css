@@ -1,0 +1,48 @@
+.range-slider {
+	width: 100%;
+	height: 10px;
+	/*Increasedheightforbettervisibility*/
+	background-color: transparent;
+	cursor: pointer;
+	appearance: none;
+	opacity: 1;
+}
+
+.range-slider::-webkit-slider-thumb {
+	width: 16px; /* Increased thumb size for better usability */
+	height: 16px;
+	margin-top: -5px; /* Adjusted margin to center the thumb vertically */
+	appearance: none;
+	background-color: #fff;
+	box-shadow: 0 0 0 4px rgba(37, 99, 235, 1);
+	border-radius: 50%; /* Using border-radius to create a circle */
+	transition: all 150ms ease-in-out;
+}
+
+.range-slider::-moz-range-thumb {
+	width: 16px;
+	height: 16px;
+	appearance: none;
+	background-color: #fff;
+	border: 4px solid rgba(37, 99, 235, 1); /* Using border instead of box-shadow for Firefox */
+	border-radius: 50%;
+	transition: all 150ms ease-in-out;
+}
+
+.range-slider::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 5px; /* Reduced height for the track */
+	background-color: #60a5fa7e; /* Changed track color to a lighter shade */
+	border-radius: 10px; /* Adjusted border radius */
+}
+
+.range-slider::-moz-range-track {
+	width: 100%;
+	height: 4px;
+	background-color: #ccc;
+	border-radius: 10px;
+}
+
+.inputBox {
+	@apply px-2 py-1 text-right  text-text bg-transparent rounded focus:outline-none focus:border-blue-500;
+}
