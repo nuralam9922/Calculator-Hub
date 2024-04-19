@@ -22,7 +22,7 @@ const boxList = [
 
 function EmiCalculator() {
 	return (
-		<div className="px-6 mt-6">
+		<div className="px-6 mt-6 py-10 select-none">
 			<div className=" text-center text-xl md:text-2xl mb-3	text-text font-bold capitalize">Emi calculator</div>
 
 			<div className="boxes grid grid-cols-3 text-xs lg:text-lg text-white lg:grid-cols-6 text-left gap-5 mt-3">
